@@ -1,8 +1,54 @@
 header{
-	height: 7vh;
-	padding: 15px 0;
-	background: #222;
+	
 	a {
-		color: #fff;
+		font-family: $font-secondary;
+		position: relative;
+		&::before{
+			content: "";
+			width: 0;
+			height: 2px;
+			background-color: #FFFFFF;
+			position: absolute;
+			bottom: -8px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			transition: -4s;
+		}
+		&:hover{
+			text-decoration: none;
+			&::before{
+				width: 100%;
+			}
+		}
+	}
+	.navbar{
+		padding-top: 53px;
+		padding-bottom: 32px;
+		> .container-fluid{
+			align-items: flex-end;
+		}
+		.navbar-nav{
+			.nav-link{
+				font-size: 20px;
+				line-height: 1.5;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				padding: 0;
+			}
+		}
+		
+		.nav-item{
+			padding: 0 0 0 32px;
+			&:before{
+				display: none;
+			}
+		}
+	}
+	.navbar-collapse{
+		margin-left: auto;
+	}
+
+    .navbar-nav {
+		margin-left: auto;
 	}
 }
