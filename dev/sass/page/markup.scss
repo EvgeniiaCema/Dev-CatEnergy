@@ -337,31 +337,43 @@ input:checked+label {
 
 .btn {
     display: inline-block;
-    padding: 12.5px 29px;
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    line-height: 1.5;
-    border-radius: 4px;
+    
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding: 16px 26px;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid transparent;
+    &:hover {
+        color: #FFFFFF;
+        border: 1px solid transparent;
+        text-decoration: none;
+    }
+    &:focus {
+        box-shadow: none;  
+    }
+    &:active {
+        color: #ffffff4d;
+        &:focus {
+            box-shadow: none;  
+        }
+    }
 }
 
 .btn-primary {
-    padding: 11px 29px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #060606;
-    background-color: #fec22d;
-
+    
+    background-color: $primary-color;
+    color: #FFFFFF;
     &:hover {
-        color: #060606;
-        background-color: $secondary-color;
-        border-color: $secondary-color;
+        background-color: $primary-color-hover;
+        border: 1px solid transparent;
     }
+    
 }
 
 .btn-secondary {
@@ -377,7 +389,6 @@ input:checked+label {
 .btn-success {
     color: $primary-color;
     background-color: transparent;
-    border: 2px solid transparent;
     border-color: $primary-color;
 
     &:hover {
@@ -387,8 +398,8 @@ input:checked+label {
 }
 
 .btn-danger {
-    color: #fff;
-    background-color: transparent;
+    color: rgb(71, 12, 12);
+    background-color: red;
     border: 2px solid transparent;
     border-color: #fff;
 
