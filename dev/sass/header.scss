@@ -1,5 +1,5 @@
 header{
-	
+	z-index: 2;
 	a {
 		font-family: $font-secondary;
 		position: relative;
@@ -22,7 +22,6 @@ header{
 		}
 	}
 	.navbar{
-		padding-top: 53px;
 		padding-bottom: 32px;
 		> .container-fluid{
 			align-items: flex-end;
@@ -50,5 +49,18 @@ header{
 
     .navbar-nav {
 		margin-left: auto;
+	}
+
+	.navbar-toggler{
+		padding: 0;
+		width: 36px;
+		height: 24px;
+		border-radius: 0;
+		&:focus{
+			box-shadow: none;
+		}
+		span{
+
+		}
 	}
 }

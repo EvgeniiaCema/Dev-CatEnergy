@@ -1,0 +1,30 @@
+.first-screen {
+    padding-top: 223px;
+    margin-top: -111px;
+    background-color: rgba(60, 78, 78, 0.43);
+    background: url(assets/img/first-screen.png) calc(50% + 114px) 155px no-repeat;
+    position: relative;
+    &:before {
+       content: "";
+       width: 50vw;
+       height: 100%;
+       background: url(assets/img/first-screen-before.png) no-repeat;
+       position: absolute;
+       top: 0;
+       right: 0;
+       z-index: -1;
+    }
+    > .container {
+        padding: 0 80px;
+        min-height: 470px;
+
+    }
+    &_title {
+        max-width: 414px;
+        margin-bottom: 40px;
+    }
+    &_subtitle {
+        @extend .title-4;
+        margin-bottom: 52px;
+    }
+}
