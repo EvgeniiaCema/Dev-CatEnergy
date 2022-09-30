@@ -1,0 +1,163 @@
+.example  {
+    background-color: #F2F2F2;
+    padding-bottom: $section-margin;
+    &-title {
+       @extend .title-1;
+       margin-bottom: 70px;
+       padding-bottom: 76px;
+       background: white;
+       position: relative;
+       z-index: 1;
+       &:before {
+        content: "";
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        width: 200vw;
+        background-color: white;
+        height: 100%;
+        z-index: -1;
+       }
+    }
+    &-options {
+        max-width: 436px;
+        &_description {
+            margin-bottom: 69px;
+        }
+        &_param {
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 60px;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                border: 1px solid #CDCDCD;
+                border-radius: 3px;
+                min-width: 162px;
+                padding-top: 15px;
+                span {
+                    font-size: 14px;
+                    display: inherit;
+                    margin: 0 auto -19px;
+                    padding: 0 9px;
+                    background: #F2F2F2;
+                }
+            }
+        }
+        &_total {
+            @extend .title-4;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 40px;
+        }
+
+    }
+    
+}
+
+
+
+/* Our wrapper */
+.example-slider {
+    position: relative;
+}
+.example-slider_wrapper{
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate3d(-50%,-50%,0);
+    overflow:hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  /* Our image information */
+  .before,
+  .after {
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow: hidden;
+  }
+  
+  .content-image{
+    height:100%;
+  }
+  
+  .after{
+    width:125px;
+  }
+  
+  .scroller{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    left:100px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background-color: transparent;
+    opacity:0.9;
+    pointer-events:auto;
+    cursor: pointer;
+  }
+  
+  .scroller:hover{
+    opacity:1;
+  }
+  
+  .scrolling{
+    pointer-events:none;
+    opacity:1;
+    // z-index: 1;
+  }
+  
+  .scroller__thumb{
+    width:100%;
+    height:100%;
+    padding:5px;
+  }
+  
+  .scroller:before,
+  .scroller:after{
+    content:" ";
+    display: block;
+    width: 7px;
+    height: 9999px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.5px;
+    z-index: 30;
+    transition:0.1s;
+  }
+  .scroller:before{
+    top:100%;
+  }
+  .scroller:after{
+    bottom:100%;
+  }
+  
+  /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+  .scroller{
+    border: 5px solid #fff;
+  }
+  .scroller:before,
+  .scroller:after{
+    background: #fff;
+  }
+
+
+
+
